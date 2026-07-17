@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mahler 8 in Busan — Mahlerian</title>
+<style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html, body {
+    min-height: 100%;
+    color: #1c1810;
+    background-color: #f7f4ee;
+    background-image: radial-gradient(rgba(28,24,16,0.025) 1px, transparent 1px);
+    background-size: 4px 4px;
+  }
+  body { display: flex; flex-direction: column; align-items: center; }
+  a { color: inherit; }
+
+  header { width: 100%; max-width: 1040px; padding: 52px 24px 0; text-align: center; }
+  header a.brand { text-decoration: none; }
+  h1 { font-family: 'Fraunces', serif; font-optical-sizing: auto; font-weight: 500; letter-spacing: -0.01em; font-size: clamp(2.2rem, 6vw, 3.6rem); color: #1c1810; }
+
+  .flourish { width: 100%; max-width: 1040px; display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 18px; padding: 0 24px; }
+  .flourish .line { height: 1px; flex: 1 1 auto; max-width: 220px; background: linear-gradient(90deg, transparent, rgba(176,138,78,0.55) 50%, transparent); }
+  .flourish .dot { width: 5px; height: 5px; border-radius: 50%; background: #b08a4e; flex: 0 0 auto; }
+
+  article { width: 100%; max-width: 720px; margin: 56px auto 64px; padding: 0 24px; }
+
+  .eyebrow { display: block; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; color: #b08a4e; margin-bottom: 12px; }
+
+  h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: clamp(1.6rem, 4vw, 2.2rem); line-height: 1.25; margin-bottom: 16px; }
+
+  .meta { display: flex; align-items: center; gap: 16px; font-family: 'Inter', sans-serif; font-size: 0.78rem; color: #8a8174; margin-bottom: 32px; flex-wrap: wrap; }
+  .meta .sep { color: rgba(28,24,16,0.2); }
+  .views { display: inline-flex; align-items: center; gap: 5px; }
+  .views svg { width: 13px; height: 13px; opacity: 0.5; }
+
+  .photo { width: 100%; margin-bottom: 32px; }
+  .photo .frame { padding: 8px; background: #fbf9f4; border: 1px solid rgba(28,24,16,0.12); box-shadow: 0 6px 16px rgba(28,24,16,0.08); }
+  .photo img { width: 100%; height: auto; display: block; }
+  .photo figcaption { margin-top: 10px; font-family: 'Inter', sans-serif; font-size: 0.66rem; letter-spacing: 0.06em; text-transform: uppercase; color: #8a8174; text-align: center; }
+
+  .body p { font-family: 'Inter', sans-serif; font-size: 1rem; line-height: 1.8; color: #2a241c; margin-bottom: 20px; }
+
+  a.back { display: inline-block; margin-top: 40px; font-family: 'Inter', sans-serif; font-size: 0.78rem; letter-spacing: 0.06em; text-decoration: none; color: #b08a4e; }
+  a.back:hover { text-decoration: underline; }
+
+  footer { width: 100%; max-width: 1040px; padding: 28px 24px 56px; text-align: center; border-top: 1px solid rgba(28,24,16,0.1); }
+  footer p { font-family: 'Inter', sans-serif; font-size: 0.72rem; letter-spacing: 0.08em; color: #a89e8d; }
+
+</style>
+</head>
+<body>
+
+  <header>
+    <a class="brand" href="../index.html"><h1>Mahlerian</h1></a>
+  </header>
+
+  <div class="flourish"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+
+  <article>
+    <span class="eyebrow">Concert Review</span>
+    <h2>Mahler 8 in Busan — a night that didn't feel real</h2>
+
+    <div class="meta">
+      <span>Jaeha Park</span>
+      <span class="sep">·</span>
+      <span>June 2026</span>
+      <span class="sep">·</span>
+      <span class="views">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+        <span id="view-count">—</span> views
+      </span>
+    </div>
+
+    <figure class="photo">
+      <div class="frame">
+        <img src="../images/busan-mahler8.jpg" alt="Busan Philharmonic Orchestra — Mahler Symphony No. 8, June 2026">
+      </div>
+      <figcaption>Busan Philharmonic Orchestra, cond. Hong Suk-won — Mahler Symphony No. 8 · June 2026</figcaption>
+    </figure>
+
+    <div class="body">
+      <p>Write your review here.</p>
+    </div>
+
+    <a class="back" href="../reviews.html">&larr; Concert Reviews</a>
+  </article>
+
+  <footer>
+    <p>MAHLERIAN — A HOME FOR LISTENING, CLOSELY</p>
+  </footer>
+
+  <script>
+    fetch('https://api.counterapi.dev/v1/mahlerian/busan-mahler8/up')
+      .then(r => r.json())
+      .then(d => {
+        document.getElementById('view-count').textContent = d.count.toLocaleString();
+      })
+      .catch(() => {
+        document.getElementById('view-count').textContent = '—';
+      });
+  </script>
+
+</body>
+</html>
