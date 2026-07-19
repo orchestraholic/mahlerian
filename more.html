@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -12,10 +12,7 @@
   html, body {
     min-height: 100%;
     color: #1c1810;
-    background-color: #f7f4ee;
-    background-image:
-      radial-gradient(rgba(28,24,16,0.025) 1px, transparent 1px);
-    background-size: 4px 4px;
+    background-color: #fafaf8;
   }
   body { display: flex; flex-direction: column; align-items: center; }
   a { color: inherit; }
@@ -24,25 +21,22 @@
   header a.brand { text-decoration: none; }
   h1 { font-family: 'Fraunces', serif; font-optical-sizing: auto; font-weight: 500; letter-spacing: -0.01em; font-size: clamp(2.2rem, 6vw, 3.6rem); color: #1c1810; }
 
-  .flourish { width: 100%; max-width: 1040px; display: flex; align-items: center; justify-content: center; gap: 14px; margin-top: 18px; padding: 0 24px; }
-  .flourish .line { height: 1px; flex: 1 1 auto; max-width: 220px; background: linear-gradient(90deg, transparent, rgba(176,138,78,0.55) 50%, transparent); }
-  .flourish .dot { width: 5px; height: 5px; border-radius: 50%; background: #b08a4e; flex: 0 0 auto; }
+  .flourish { display: none; }
 
-  nav.tabs { width: 100%; max-width: 1040px; margin-top: 36px; padding: 0 24px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  nav.tabs { width: 100%; max-width: 1040px; margin-top: 32px; padding: 0 24px; display: flex; border-bottom: 1px solid rgba(28,24,16,0.1); }
   nav.tabs a {
-    font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.85rem; letter-spacing: 0.06em;
-    text-align: center; color: #1c1810; text-decoration: none; padding: 16px 8px;
-    background: #fbf9f4;
-    border: 1px solid rgba(28, 24, 16, 0.15);
-    border-radius: 3px;
-    box-shadow: 0 1px 0 rgba(28,24,16,0.04);
-    transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+    font-family: 'Inter', sans-serif; font-weight: 500; font-size: 0.85rem; letter-spacing: 0.02em;
+    color: #999; text-decoration: none; padding: 12px 24px 12px 0;
+    border-bottom: 2px solid transparent; margin-bottom: -1px;
+    background: none;
+    transition: color 0.2s ease, border-color 0.2s ease;
   }
-  nav.tabs a:hover, nav.tabs a:focus-visible { background: #1c1810; border-color: #1c1810; color: #f7f4ee; transform: translateY(-1px); }
-  nav.tabs a.active { background: #1c1810; border-color: #1c1810; color: #f7f4ee; }
+  nav.tabs a:hover, nav.tabs a:focus-visible { color: #1c1810; border-bottom-color: #1c1810; }
+  nav.tabs a.active { color: #1c1810; border-bottom-color: #1c1810; font-weight: 600; }
 
   @media (max-width: 720px) {
-    nav.tabs { grid-template-columns: repeat(2, 1fr); }
+    nav.tabs { flex-wrap: wrap; }
+    nav.tabs a { padding: 10px 16px 10px 0; font-size: 0.8rem; }
   }
 
   main { width: 100%; max-width: 720px; margin: 56px auto 60px; padding: 0 24px; }
@@ -79,7 +73,7 @@
     <a class="brand" href="index.html"><h1>Mahlerian</h1></a>
   </header>
 
-  <div class="flourish"><span class="line"></span><span class="dot"></span><span class="line"></span></div>
+
 
   <nav class="tabs">
     <a href="reviews.html">Concert Reviews</a>
@@ -100,3 +94,4 @@
 
 </body>
 </html>
+
