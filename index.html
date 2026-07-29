@@ -120,8 +120,8 @@
   .recent li { border-bottom: 1px solid rgba(28, 24, 16, 0.1); }
   .recent a.post { display: flex; gap: 26px; align-items: center; padding: 28px 0; text-decoration: none; transition: opacity 0.2s ease; }
   .recent a.post:hover { opacity: 0.65; }
-  .recent .thumb { flex: 0 0 auto; width: 240px; display: flex; gap: 6px; }
-  .recent .thumb img { width: calc(50% - 3px); height: 150px; object-fit: contain; display: block; background: #f0efe9; border-radius: 6px; image-orientation: from-image; }
+  .recent .thumb { flex: 0 0 auto; width: 200px; display: flex; gap: 6px; align-items: flex-start; }
+  .recent .thumb img { width: calc(50% - 3px); height: auto; display: block; border-radius: 6px; }
   .recent .text { flex: 1 1 auto; min-width: 0; }
   .recent .post-eyebrow { display: block; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: #b08a4e; margin-bottom: 8px; }
   .recent .post-title { display: block; font-family: 'Fraunces', serif; font-size: 1.5rem; font-weight: 500; color: #1c1810; line-height: 1.28; }
@@ -139,7 +139,7 @@
     .photos img { height: 200px; }
     .recent a.post { flex-direction: column; align-items: stretch; gap: 14px; }
     .recent .thumb { width: 100%; }
-    .recent .thumb img { height: 180px; }
+    .recent .thumb img { width: calc(50% - 3px); height: auto; }
     .recent .post-title { font-size: 1.3rem; }
   }
 </style>
