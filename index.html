@@ -114,26 +114,30 @@
   cite::before { content: '—'; margin-right: 6px; color: #b08a4e; }
 
   /* ---------- Recently ---------- */
-  .recent { width: 100%; max-width: 720px; margin: 64px auto 24px; padding: 0 24px; }
-  .intro { width: 100%; max-width: 720px; margin: 48px auto 0; padding: 0 24px; }
+  .recent { width: 100%; max-width: 720px; margin: 48px auto 0; padding: 0 24px; }
+  .recent .label { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: #b08a4e; display: block; margin-bottom: 20px; }
+  .recent ul { list-style: none; }
+  .recent li { border-bottom: 1px solid rgba(28, 24, 16, 0.1); }
+  .recent a.post { display: flex; gap: 18px; align-items: center; padding: 18px 0; text-decoration: none; transition: opacity 0.2s ease; }
+  .recent a.post:hover { opacity: 0.65; }
+  .recent .thumb { flex: 0 0 auto; width: 96px; height: 72px; border-radius: 6px; background: #ececE6; overflow: hidden; }
+  .recent .thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .recent .text { flex: 1 1 auto; min-width: 0; }
+  .recent .post-eyebrow { display: block; font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; color: #b08a4e; margin-bottom: 5px; }
+  .recent .post-title { display: block; font-family: 'Fraunces', serif; font-size: 1.1rem; font-weight: 500; color: #1c1810; line-height: 1.3; }
+  .recent .post-meta { display: block; margin-top: 5px; font-family: 'Inter', sans-serif; font-size: 0.75rem; color: #8a8174; }
+
+  .intro { width: 100%; max-width: 720px; margin: 56px auto 0; padding: 0 24px; }
   .intro p { font-family: 'Inter', sans-serif; font-size: 1rem; line-height: 1.75; color: #3a3228; margin-bottom: 16px; }
   .intro p.find-me { font-family: 'Inter', sans-serif; font-size: 0.78rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: #b08a4e; margin-bottom: 8px; }
   .intro p.links { font-size: 0.88rem; color: #8a8174; }
   .intro p.links span { color: #3a3228; }
   .intro p.links a { color: #b08a4e; text-decoration: none; }
   .intro p.links a:hover { text-decoration: underline; }
-  .intro p.closing { font-family: 'Fraunces', serif; font-style: italic; font-size: 1.05rem; color: #1c1810; margin-top: 24px; }
-  .recent .label { font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: #b08a4e; display: block; margin-bottom: 18px; }
-  .recent ul { list-style: none; }
-  .recent li { border-bottom: 1px solid rgba(28, 24, 16, 0.1); }
-  .recent a.post { display: block; padding: 16px 4px; text-decoration: none; border-left: 2px solid transparent; padding-left: 14px; margin-left: -16px; transition: border-color 0.2s ease, background 0.2s ease; }
-  .recent li:first-child a.post { padding-top: 0; padding-left: 14px; }
-  .recent a.post:hover { border-left-color: #b08a4e; background: rgba(176,138,78,0.05); }
-  .recent .post-title { display: block; font-family: 'Fraunces', serif; font-size: 1.05rem; font-weight: 500; color: #1c1810; }
-  .recent .post-meta { display: block; margin-top: 4px; font-family: 'Inter', sans-serif; font-size: 0.75rem; color: #8a8174; }
 
   @media (max-width: 600px) {
     .photos img { height: 200px; }
+    .recent .thumb { width: 72px; height: 56px; }
   }
 </style>
 </head>
@@ -151,6 +155,32 @@
     <a href="discussions.html">Discussions</a>
     <a href="more.html">More</a>
   </nav>
+
+  <section class="recent">
+    <span class="label">Recent</span>
+    <ul>
+      <li>
+        <a class="post" href="posts/pyeongchang-mahler2.html">
+          <span class="thumb"></span>
+          <span class="text">
+            <span class="post-eyebrow">Concert Review</span>
+            <span class="post-title">A Great Conductor, and a Deeper Love for Mahler</span>
+            <span class="post-meta">Music in PyeongChang · Summer 2025</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="post" href="posts/breakfast-with-a-mahlerian.html">
+          <span class="thumb"></span>
+          <span class="text">
+            <span class="post-eyebrow">Discussion</span>
+            <span class="post-title">Breakfast with a Mahlerian</span>
+            <span class="post-meta">PyeongChang · Summer 2025</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </section>
 
   <section class="photos">
     <figure>
