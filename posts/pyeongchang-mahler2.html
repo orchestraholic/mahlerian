@@ -32,6 +32,13 @@
   .views { display: inline-flex; align-items: center; gap: 5px; }
   .views svg { width: 13px; height: 13px; opacity: 0.5; }
 
+  .gallery { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 34px; }
+  .gallery figure { width: 100%; }
+  .gallery .frame { padding: 6px; background: #fbf9f4; border: 1px solid rgba(28,24,16,0.12); box-shadow: 0 6px 16px rgba(28,24,16,0.08); }
+  .gallery img { width: 100%; height: 300px; object-fit: cover; display: block; image-orientation: from-image; }
+  .gallery figcaption { margin-top: 9px; font-family: 'Inter', sans-serif; font-size: 0.64rem; letter-spacing: 0.05em; text-transform: uppercase; color: #8a8174; text-align: center; }
+  @media (max-width: 600px) { .gallery { grid-template-columns: 1fr; } .gallery img { height: 260px; } }
+
   .body p { font-family: 'Inter', sans-serif; font-size: 1rem; line-height: 1.85; color: #2a241c; margin-bottom: 22px; }
 
   .also { margin-top: 40px; padding: 18px 20px; background: #f3f1ec; border-radius: 8px; font-family: 'Inter', sans-serif; font-size: 0.9rem; color: #5a5347; }
@@ -65,6 +72,17 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
         <span id="view-count">—</span> views
       </span>
+    </div>
+
+    <div class="gallery">
+      <figure>
+        <div class="frame"><img src="../images/pyeongchang-stage.jpg" alt="Music in PyeongChang stage before the concert"></div>
+        <figcaption>2025 Music in PyeongChang · before the concert</figcaption>
+      </figure>
+      <figure>
+        <div class="frame"><img src="../images/pyeongchang-curtaincall.jpg" alt="Curtain call — Jonathan Stockhammer and the Seoul Philharmonic Orchestra"></div>
+        <figcaption>Curtain call · cond. Jonathan Stockhammer</figcaption>
+      </figure>
     </div>
 
     <div class="body">
